@@ -6,8 +6,9 @@
   "scripts": {
     "start": "rider-react start",
     "build": "rider-react build",
+    "test": "rider-react test",
     "lint": "npm run lint-eslint && npm run lint-stylelint",
-    "lint-eslint": "eslint -c .eslintrc.js --ext .ts,.tsx,.js src",
+    "lint-eslint": "eslint -c .eslintrc --ext .ts,.tsx,.js src",
     "lint-stylelint": "stylelint --config .stylelintrc src/**/*.{less,css,scss}",
     "prepare": "husky install",
     "commit-msg": "commitlint --config .commitlint.config.js -E HUSKY_GIT_PARAMS",
@@ -30,30 +31,36 @@
   },
   "homepage": "https://github.com/augustaba/react-project-template#readme",
   "devDependencies": {
-    "@augustaba/eslint-plugin": "^0.0.3",
-    "@augustaba/rider-cli": "0.0.1-beta.6",
+    "@augustaba/eslint-plugin": "0.0.4",
+    "@augustaba/rider-cli": "0.0.1-beta.9",
     "@commitlint/cli": "^16.1.0",
     "@commitlint/config-conventional": "^16.0.0",
-    "@types/react": "^17.0.38",
-    "@types/react-dom": "^17.0.11",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.2.0",
+    "@types/jest": "^27.5.0",
+    "@types/react": "^18.0.8",
+    "@types/react-dom": "^18.0.3",
     "eslint": "8.14.0",
     "husky": "^7.0.4",
+    "jest": "^28.0.3",
     "lint-staged": "^12.3.3",
     "prettier": "^2.5.1",
     "sass": "^1.51.0",
     "stylelint": "^14.3.0",
     "stylelint-config-prettier": "^9.0.3",
     "stylelint-config-standard": "^24.0.0",
+    "stylelint-config-standard-scss": "^3.0.0",
     "typescript": "^4.5.5"
   },
   "dependencies": {
+    "classnames": "^2.3.1",
     "node-sass": "^7.0.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0"
   },
   "lint-staged": {
     "*.{ts,tsx,js}": [
-      "eslint --config .eslintrc.js"
+      "eslint --config .eslintrc"
     ],
     "*.{css,less,scss}": [
       "stylelint --config .stylelintrc"

@@ -1,4 +1,4 @@
 {
-  "extends": ["stylelint-config-standard", "stylelint-config-prettier"],
+  "extends": ["stylelint-config-standard", "stylelint-config-prettier", "stylelint-config-standard-scss"],
   "ignoreFiles": ["node_modules/**/*"]
 }
