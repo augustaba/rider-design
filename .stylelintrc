@@ -1,4 +1,11 @@
 {
   "extends": ["stylelint-config-standard", "stylelint-config-prettier", "stylelint-config-standard-scss"],
-  "ignoreFiles": ["node_modules/**/*"]
+  "ignoreFiles": ["node_modules/**/*"],
+  "rules": {
+    "comment-no-empty": null,
+    "string-quotes": "single",
+    "no-descending-specificity": null,
+    "scss/comment-no-empty": null,
+    "scss/no-global-function-names": null
+  }
 }
